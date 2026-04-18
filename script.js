@@ -22,6 +22,23 @@ document.addEventListener('DOMContentLoaded', () => {
     let animationId;
     let isRecording = false;
 
+    let promptInterval;
+    const transcriptPlaceholder = document.querySelector('.placeholder-text');
+    const prompts = [
+        "\"Listening. Vent it all out...\"",
+        "\"We hear you...\"",
+        "\"Nothing is recorded...\"",
+        "\"Let the tension out...\"",
+        "\"Keep going...\"",
+        "\"No judgment here...\""
+    ];
+    let promptIndex = 0;
+
+    // Memory wipe failsafe to prevent browser session restore
+    window.addEventListener('beforeunload', () => {
+        textInput.value = '';
+    });
+
     function switchScreen(screenName) {
         Object.values(screens).forEach(screen => screen.classList.add('hidden'));
         screens[screenName].classList.remove('hidden');
@@ -66,6 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function startVisualizer(stream) {
         audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioContext.state === 'suspended') {
+            audioContext.resume();
+        }
         analyser = audioContext.createAnalyser();
         microphone = audioContext.createMediaStreamSource(stream);
         
@@ -110,10 +130,21 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
         
+        if (promptInterval) clearInterval(promptInterval);
+        promptIndex = 0;
+        transcriptPlaceholder.textContent = prompts[promptIndex];
+        
+        promptInterval = setInterval(() => {
+            promptIndex = (promptIndex + 1) % prompts.length;
+            transcriptPlaceholder.textContent = prompts[promptIndex];
+        }, 4000);
+
         renderFrame();
     }
 
     function stopVisualizer() {
+        if (promptInterval) clearInterval(promptInterval);
+        transcriptPlaceholder.textContent = "\"Listening. Vent it all out...\"";
         if (animationId) cancelAnimationFrame(animationId);
         if (microphone && microphone.mediaStream) {
             microphone.mediaStream.getTracks().forEach(t => t.stop());

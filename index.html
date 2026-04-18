@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Noor | The 2:00 AM Venting Protocol</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <noscript>
+        <div style="background: #a30000; color: white; padding: 15px; text-align: center; font-family: monospace; z-index: 9999; position: relative;">
+            CRITICAL ERROR: JAVASCRIPT DISABLED.
+            Noor requires local scripts to run the zero-knowledge audio visualizer and memory-wiping protocols. We cannot guarantee anonymity without it. Please enable JavaScript.
+        </div>
+    </noscript>
     <div class="noise-overlay"></div>
     <div class="container">
         <header>
@@ -60,7 +69,7 @@
                     <span>// SECURE TEXT PROTOCOL</span>
                     <button id="back-to-voice" class="icon-btn"><i class="fas fa-arrow-left"></i></button>
                 </div>
-                <textarea id="text-input" placeholder="Start typing... Everything is wiped when you close this window."></textarea>
+                <textarea id="text-input" placeholder="Start typing... Everything is wiped when you close this window." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" data-gramm="false"></textarea>
                 <div class="controls">
                     <button id="destroy-text-btn" class="danger-btn">
                         <i class="fas fa-fire"></i> Burn & Close

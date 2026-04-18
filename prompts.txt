@@ -1,0 +1,22 @@
+Here is the prompt log detailing the specific commands and adversarial constraints used to force the generative system past its default, generic outputs and build the strategy for the repository:
+
+Phase 1: Persona Generation and Adversarial Testing
+
+Prompt 1 (Baseline Synthesis): "Generate three detailed personas of 19-year-old JEE/NEET aspirants living in Kota. Include their 2:00 AM inner monologues and specific environmental triggers. You must use Hinglish idioms of distress like 'tension' and 'brain fog' instead of clinical terms like 'depression' or 'therapy'." 
+Prompt 2 (Resource Constraint Attack): "Attack the personas by placing them in a scenario with severe constraints: a degraded 2G connection, an outdated phone, and eating subpar mess food like 'gatte ki sabzi'. Evaluate if their inner monologue defaults to generalized anxiety or highly specific, context-driven distress." 
+Prompt 3 (The Stigma Trap): "Introduce a direct, well-meaning intervention (e.g., 'Your mental health is important, try this therapy app'). Simulate their violent rejection based on the cultural stigma that associates such interventions with being 'crazy' or 'mad', and document their exact defense mechanisms." 
+
+Phase 2: Channel Mapping and Message Simulation
+
+Prompt 4 (Dark Social Mapping): "Identify 10 high-leverage, zero-budget 'Dark Social' distribution channels. Focus exclusively on underground networks like Telegram bots distributing pirated practice problems (e.g., @bohring_bot), silent Discord study servers (e.g., JEE NEET GANG), and anonymous subreddits (e.g., r/JEENEETards)." 
+Prompt 5 (Message Generation & Monte Carlo Simulation): "Draft 25 distinct outreach messages across 5 tonal archetypes. Simulate how the three hardened personas react to each. Apply a strict failure quota: force at least 15 messages to fail—especially those using clinical language—so the personas act as brutally honest critics. Iterate until a peer-to-peer slang message achieves a 40% simulated response rate." 
+
+Phase 3: Non-Obvious Distribution Generation
+
+Prompt 6 (Physical Bottleneck Strategy): "Generate a completely non-obvious, zero-budget distribution idea. Strict constraint: Do not use social media algorithms, digital ads, influencers, or college administrations. Find an offline bottleneck in the Kota ecosystem where students experience high academic stress." (This prompted the localized Xerox shop micro-sponsorship strategy).
+
+Phase 4: Client Application & Documentation Engineering
+
+Prompt 7 (One-Shot Execution): "make it in one-shot. look forward to remove any possible issues errors or drawbacks." (This command executed the actual engineering of `index.html`, `style.css`, and `script.js`, transcribing the conceptual strategy into a real, zero-dependency, dark-themed local web app equipped with an anonymous Audio API visualizer).
+Prompt 8 (Documentation Generation): "make a readme.md for this task" (This generated the project's README file detailing the architecture, anonymity philosophy, and UI features).
+Prompt 9 (Prompt Archiving - Initial): "make a file with a list of all the propmts i have used to make this" (This triggered the initial creation of this text log to archive the engineering commands).

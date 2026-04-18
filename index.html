@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noor | The 2:00 AM Venting Protocol</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="noise-overlay"></div>
+    <div class="container">
+        <header>
+            <div class="logo">NOOR<span class="dot">.</span></div>
+            <div class="status">
+                <span class="status-indicator"></span>
+                <span class="status-text">Encrypted Connection</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="intro" id="intro-screen">
+                <p class="monospace-tag">// STATUS: ANONYMOUS</p>
+                <h1>Syllabus impossible.<br>Mind shattered.<br>Don't hold it in.</h1>
+                <p class="subtitle">No gyan, no unsolicited advice. Just a secure space to vent your 2:00 AM thoughts. Speak your mind. It disappears when you're done.</p>
+                
+                <div class="action-buttons">
+                    <button id="start-voice-btn" class="primary-btn">
+                        <i class="fas fa-microphone"></i> Start Venting
+                    </button>
+                    <button id="text-mode-btn" class="secondary-btn">
+                        <i class="fas fa-keyboard"></i> Use Text
+                    </button>
+                </div>
+            </section>
+
+            <section class="recording-ui hidden" id="recording-screen">
+                <div class="recording-status">
+                    <span class="pulse-dot"></span> RECORDING...
+                </div>
+                
+                <div class="visualizer" id="visualizer">
+                    <!-- Audio bars injected via JS -->
+                </div>
+
+                <div class="transcript" id="transcript-area">
+                    <p class="placeholder-text">"Listening. Vent it all out..."</p>
+                </div>
+
+                <div class="controls">
+                    <button id="stop-btn" class="danger-btn">
+                        <i class="fas fa-stop"></i> End Session & Destroy
+                    </button>
+                </div>
+            </section>
+            
+            <section class="text-ui hidden" id="text-screen">
+                <div class="text-header">
+                    <span>// SECURE TEXT PROTOCOL</span>
+                    <button id="back-to-voice" class="icon-btn"><i class="fas fa-arrow-left"></i></button>
+                </div>
+                <textarea id="text-input" placeholder="Start typing... Everything is wiped when you close this window."></textarea>
+                <div class="controls">
+                    <button id="destroy-text-btn" class="danger-btn">
+                        <i class="fas fa-fire"></i> Burn & Close
+                    </button>
+                </div>
+            </section>
+            
+            <section class="post-vent hidden" id="post-screen">
+                <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+                <h2>Session Destroyed.</h2>
+                <p>Everything you said has been permanently deleted.<br>Take a deep breath.</p>
+                <button id="return-home" class="secondary-btn">Return</button>
+            </section>
+        </main>
+        
+        <footer>
+            <p>100% Anonymous. No logs kept. No tracking.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
